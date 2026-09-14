@@ -41,6 +41,7 @@ Note : ans = INT_MAX;
 // Find the minimal element form this array
 #include <climits>
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
@@ -49,7 +50,15 @@ int main()
     int ans = INT_MAX;  // int ans = INT_MAX;  // usually 2147483647
     int ans2 = INT_MIN; // // usually -2147483648
     int arr[] = {23, 423, 55, 2, 555};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    char name;
+    string name11;
+    string name2 = "Himanshu Shekhar";
+    cout << sizeof(name) << endl;            // 1
+    cout << sizeof(name11) << endl;          // 24
+    cout << sizeof(name2) << endl;           // 24
+    cout << sizeof(arr[0]) << endl;          // sizeof inbuild funciton hai. // 4
+    cout << sizeof(arr) << endl;             // sara integer 4 hai 4*5 --> 20 ho gya
+    int size = sizeof(arr) / sizeof(arr[0]); // size of array =  20 % 4 ;
 
     for (int i = 0; i < size; i++)
     {
